@@ -1,9 +1,20 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('Hello, world!');
+router.get("/", function (req, res, next) {
+    res.send({
+        items: [
+            {
+                id: 1,
+                name: "Valeria",
+            },
+            {
+                id: 2,
+                name: "Egor",
+            },
+        ],
+    });
 });
 
 module.exports = router;
